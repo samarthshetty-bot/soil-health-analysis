@@ -1,0 +1,21 @@
+body {
+  background: #f8fdf8;
+  font-family: "Poppins", sans-serif;
+}
+
+h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+.btn-outline-success:hover {
+  background-color: #198754;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,21 @@
+Region,pH,Nitrogen,Phosphorus,Potassium,Organic_Carbon,Soil_Type,Fertility_Level,Soil Health
+North Valley,6.5,28,12,160,1.2,Loamy,Medium,Good
+South Plains,5.8,18,8,140,0.9,Sandy,Low,Moderate
+East Ridge,7.1,32,15,180,1.4,Clay,High,Good
+West Hills,6.2,25,10,150,1.0,Loamy,Medium,Good
+Central Basin,5.5,20,9,130,0.8,Sandy,Low,Moderate
+Northern Plateau,6.8,30,14,170,1.3,Clay,High,Good
+Southern Delta,7.4,33,16,190,1.5,Alluvial,High,Good
+Eastern Coast,5.9,22,11,145,1.0,Sandy,Medium,Moderate
+Western Ghats,6.6,27,13,155,1.1,Loamy,Medium,Good
+River Valley,7.2,35,18,200,1.6,Alluvial,High,Good
+Highland Zone,5.4,17,7,120,0.7,Sandy,Low,Poor
+Midland Fields,6.0,23,10,145,0.9,Loamy,Medium,Good
+Coastal Plains,7.0,31,15,175,1.4,Clay,High,Good
+Hill Terraces,5.7,19,9,135,0.8,Sandy,Low,Moderate
+Delta Region,6.9,29,13,165,1.2,Alluvial,Medium,Good
+Arid Zone,8.1,15,6,110,0.6,Sandy,Low,Poor
+Rainfed Fields,6.3,26,11,150,1.0,Loamy,Medium,Good
+Black Soil Belt,7.5,34,17,195,1.5,Clay,High,Good
+Semi-Arid Plains,6.1,24,9,140,0.9,Sandy,Medium,Good
+Forest Edge,6.7,28,12,160,1.3,Loamy,Medium,Good

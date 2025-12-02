@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold text-success">🌾 Soil Health Dashboard</h2>
+    <p class="text-muted">Input your soil details manually or upload a CSV file for bulk analysis.</p>
+  </div>
+
+  <div class="row g-4">
+    <!-- ✅ Manual Input Card -->
+    <div class="col-md-6">
+      <div class="card shadow-sm p-4 border-success" style="border-radius: 15px;">
+        <h5 class="text-success mb-3">🧾 Manual Soil Input</h5>
+        <form method="POST">
+          <input type="hidden" name="manual" value="1">
+          <div class="row">
+            <div class="col-6 mb-3">
+              <label class="form-label">Nitrogen (N)</label>
+              <input type="number" step="0.01" class="form-control" name="N" placeholder="Enter N value" required>
+            </div>
+            <div class="col-6 mb-3">
+              <label class="form-label">Phosphorus (P)</label>
+              <input type="number" step="0.01" class="form-control" name="P" placeholder="Enter P value" required>
+            </div>
+            <div class="col-6 mb-3">
+              <label class="form-label">Potassium (K)</label>
+              <input type="number" step="0.01" class="form-control" name="K" placeholder="Enter K value" required>
+            </div>
+            <div class="col-6 mb-3">
+              <label class="form-label">pH Level</label>
+              <input type="number" step="0.01" class="form-control" name="pH" placeholder="Enter pH" required>
+            </div>
+            <div class="col-6 mb-3">
+              <label class="form-label">Temperature (°C)</label>
+              <input type="number" step="0.01" class="form-control" name="temperature" placeholder="Enter Temp" required>
+            </div>
+            <div class="col-6 mb-3">
+              <label class="form-label">Moisture (%)</label>
+              <input type="number" step="0.01" class="form-control" name="moisture" placeholder="Enter Moisture" required>
+            </div>
+          </div>
+          <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-success fw-semibold">🌱 Get Recommendation</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ✅ CSV Upload Card -->
+    <div class="col-md-6">
+      <div class="card shadow-sm p-4 border-primary" style="border-radius: 15px;">
+        <h5 class="text-primary mb-3">📂 Upload Soil Data (CSV)</h5>
+        <form method="POST" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label">Select CSV File</label>
+            <input type="file" name="csvfile" accept=".csv" class="form-control" required>
+          </div>
+          <p class="text-muted small">Ensure your CSV includes columns: N, P, K, pH, temperature, moisture</p>
+          <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-primary fw-semibold">📊 Upload & Predict</button>
+          </div>
+        </form>
+
+        <div class="alert alert-info mt-4 mb-0">
+          💡 <strong>Tip:</strong> Upload multiple soil samples (from up to 5 acres) to get a <br>
+          <span class="text-success fw-semibold">farm-level crop recommendation</span> and average soil analysis.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Footer Section -->
+  <div class="text-center mt-5">
+    <a href="{{ url_for('logout') }}" class="btn btn-outline-danger fw-semibold">🚪 Logout</a>
+  </div>
+</div>
+
+{% endblock %}

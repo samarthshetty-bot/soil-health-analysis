@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- 🌿 Hero Section -->
+<div class="hero-section d-flex flex-column justify-content-center align-items-center text-center p-5">
+  <h1 class="display-5 fw-bold text-success mb-3 animate__animated animate__fadeInDown">
+    🌾 Soil Health Monitoring & Analysis
+  </h1>
+  <p class="lead text-secondary mb-4 animate__animated animate__fadeInUp">
+    Empowering Smart Agriculture with Data-Driven Soil Insights 🌱
+  </p>
+
+  <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeInUp animate__delay-1s">
+    <a href="{{ url_for('login') }}" class="btn btn-success btn-lg px-4 shadow">
+      🔑 Login
+    </a>
+    <a href="{{ url_for('signup') }}" class="btn btn-outline-success btn-lg px-4 shadow">
+      ✍️ Sign Up
+    </a>
+  </div>
+</div>
+
+<!-- 🌾 Info Section -->
+<div class="container mt-5 mb-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="https://cdn-icons-png.flaticon.com/512/3541/3541850.png" alt="Soil Data" class="img-fluid rounded-4 shadow-sm">
+    </div>
+    <div class="col-md-6">
+      <h3 class="fw-bold text-success mb-3">About the Project</h3>
+      <p class="text-muted">
+        The <strong>Soil Health Monitoring & Analysis System</strong> leverages
+        <strong>Machine Learning</strong> to assess soil fertility, recommend suitable crops,
+        and provide fertilizer suggestions. Farmers can manually input soil parameters
+        or upload CSV files containing multiple samples from their land.
+      </p>
+      <ul class="text-muted">
+        <li>🌱 Predicts soil fertility (High / Medium / Low)</li>
+        <li>🌾 Recommends best crops for cultivation</li>
+        <li>💧 Provides fertilizer suggestions with icons</li>
+        <li>📊 Visualizes soil parameter data with charts</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 🌿 Call to Action -->
+<div class="text-center bg-success bg-gradient text-white py-5 rounded-3 shadow-sm">
+  <h4 class="fw-semibold mb-3">Start Analyzing Your Soil Today!</h4>
+  <p class="mb-4">Unlock insights into your farm’s fertility and make informed crop decisions.</p>
+  <a href="{{ url_for('signup') }}" class="btn btn-light btn-lg fw-semibold px-4 shadow">
+    🚀 Get Started
+  </a>
+</div>
+
+<style>
+  .hero-section {
+    min-height: 70vh;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    border-radius: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  .hero-section h1 {
+    color: #2e7d32;
+  }
+  .btn-success:hover, .btn-outline-success:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  ul li {
+    margin-bottom: 6px;
+  }
+</style>
+
+{% endblock %}
